@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>        
+
+    <h3 class="green">Esercizio 0</h3>
+    <br>
+    <div>
+        <span id="studiare" style="border-bottom: 0.01rem solid"><b>Studiare</b></span> le dispende disponibili al seguente <a href="../../capitoli/2equazioneRetta/equazioneRetta/index.html">link</a>
+    </div>    
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        Consideriamo i punti 
+        \[
+            A\left(0\,;\,\,8\right) \qquad B\left(1\,;\,\,12\right) 
+        \]
+        \[
+            C\left(2\,;\,\,-17\right) \qquad D\left(-3\,;\,\,-8\right) 
+        \]
+        Stabilire quali tra di essi <b>soddisfano</b> l'equazione 
+        \[
+             y = 5x + 7
+        \]
+    </div>
+    
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio guida</h3>
+    <br>
+    <div id="slide-container1" class="slide-container grayBorder">
+        <div class="slide1">
+            Stabilire il <b>termine noto</b> della retta rappresentata in figura.
+            <br>
+            <br>
+            <img src="img/5(1).png" style="width: 70%;"> 
+        </div>
+        <div class="slide1">
+            Stabilire il <b>termine noto</b> della retta rappresentata in figura.
+            <br>
+            <br>
+            <img src="img/5(1).png" style="width: 70%;"> 
+            <br>
+            Guardiamo il punto di intersezione tra la retta assegnata e l'asse delle \(y\).
+        </div>
+        <div class="slide1">
+            Stabilire il <b>termine noto</b> della retta rappresentata in figura.
+            <br>
+            <br>
+            <img src="img/5(2).png" style="width: 70%;"> 
+            <br>
+            Guardiamo il punto di intersezione tra la <span style="color: red">retta assegnata</span> e l'asse delle \(y\).
+        </div>
+        <div class="slide1">
+            Stabilire il <b>termine noto</b> della retta rappresentata in figura.
+            <br>
+            <br>
+            <img src="img/5(3).png" style="width: 70%;"> 
+            <br>
+            Guardiamo il punto di intersezione tra la retta assegnata e l'<span style="color: red">asse delle \(y\)</span>.
+        </div>
+        <div class="slide1">
+            Stabilire il <b>termine noto</b> della retta rappresentata in figura.
+            <br>
+            <br>
+            <img src="img/5(4).png" style="width: 70%;"> 
+            <br>
+            Guardiamo il <span style="color: red">punto di intersezione</span> tra la retta assegnata e l'asse delle \(y\).
+        </div>       
+        <div class="slide1">
+            Stabilire il <b>termine noto</b> della retta rappresentata in figura.
+            <br>
+            <br>
+            <img src="img/5(4).png" style="width: 70%;"> 
+            <br>
+            Guardiamo il punto di intersezione tra la retta assegnata e l'asse delle \(y\).
+            <br>
+            Tale punto ha coordinate \((0\,;\,\,2)\).            
+        </div>
+        <div class="slide1">
+            Stabilire il <b>termine noto</b> della retta rappresentata in figura.
+            <br>
+            <br>
+            <img src="img/5(4).png" style="width: 70%;"> 
+            <br>
+            Guardiamo il punto di intersezione tra la retta assegnata e l'asse delle \(y\).
+            <br>
+            Tale punto ha coordinate \((0\,;\,\,2)\).            
+            <br>
+            Questo implica che il <b>termine noto</b> è \(2\).
+        </div>
+        
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+        <button id="previousSlide-button1" onclick="previousSlide(1)">Indietro</button>
+        <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+    </div>    
+    
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <div>
+        Di seguito sono riportare cinque equazioni e cinque rette.
+        <br>
+        Associare ciascuna equazione alla retta che rappresenta.
+        <br>
+        <br>
+        <div style="display:flex; flex-direction: column; justify-content: flex-start; align-items:center;">
+            <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+                <div style="width: 50%;">
+                    <span style="width: 100%; align-content: center;"><b>Equazione 1</b></span>
+                    \[
+                        y = 2x
+                    \]
+                </div>
+                <div style="width: 50%;">
+                    <b>Grafico 1</b> <img style="display: inline;" src="img/5(9).png" style="width: 100%;">
+                </div>
+            </div>
+            <br>
+            <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+                <div style="width: 50%;">
+                    <span style="width: 100%; align-content: center;"><b>Equazione 2</b></span>
+                    \[
+                        y = 4x
+                    \]
+                </div>
+                <div style="width: 50%;">
+                    <b>Grafico 2</b><img src="img/5(7).png" style="width: 100%;">
+                </div>
+            </div>
+            <br>
+            <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+                <div style="width: 50%;">
+                    <span style="width: 100%; align-content: center;"><b>Equazione 3</b></span>
+                    \[
+                        y = -3x
+                    \]
+                </div>
+                <div style="width: 50%;">
+                    <b>Grafico 3</b><img src="img/5(8).png" style="width: 100%;">
+                </div>
+            </div>
+            <br>
+            <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+                <div  style="width: 50%;">
+                    <span style="width: 100%; align-content: center;"><b>Equazione 4</b></span>
+                    \[
+                        y = 0x
+                    \]
+                </div>
+                <div style="width: 50%;">
+                    <b>Grafico 4</b><img src="img/5(6).png" style="width: 100%;">
+                </div>
+            </div>
+            <br>
+            <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+                <div style="width: 50%;">
+                    <span style="width: 100%; align-content: center;"><b>Equazione 5</b></span>
+                    \[
+                        y = -\dfrac{1}{2}x
+                    \]
+                </div>
+                <div style="width: 50%;">
+                    <b>Grafico 5</b><img src="img/5(5).png" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <br>    
+
+    <div class="gray">
+        <b>Suggerimento</b>:
+        <br>
+        Per risolvere l'esercizio ricordate che il <b>coefficiente angolare</b> della retta è legato
+        alla sua <b>pendenza</b>. Se necessario provate a consultate nuovamente le <a class="gray" href="../../capitoli/2equazioneRetta/equazioneRetta/index.html">dispense</a>.
+    </div>
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+    
+    <script>
+        setInterval(rndColor, 500)
+        function rndColor() {
+            let studiare = document.getElementById("studiare")
+            
+            let rnd1 = Math.random()*255;
+            let rnd2 = Math.random()*255;
+            let rnd3 = Math.random()*255;
+            
+            studiare.style.color = `rgb(${rnd1}, ${rnd2}, ${rnd3})`
+            
+            rnd1 = 255 - Math.random()*255;
+            rnd2 = 255 - Math.random()*255;
+            rnd3 = 255 - Math.random()*255;
+            
+            studiare.style.border.color = `rgb(${rnd1}, ${rnd2}, ${rnd3})`
+        }
+    </script>
+    
+</body>
