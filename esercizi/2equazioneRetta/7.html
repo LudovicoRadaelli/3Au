@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>        
+
+    <h3 class="yellow">Spostamento orizzontale</h3>
+    <div class="esempi-container">
+        Fino a questo momento per determinare lo spostamento orizzontale da un punto ad un altro 
+        ci siamo appoggiati all'aspetto grafico, contando di quanti quadretti consisteva lo spostemento
+        e verso quale direzione.
+        <br>
+        <br>
+        Consideriamo ad esempio i punti
+        \[
+            A(1\,;\,\,1) \qquad B(4\,;\,\,3)
+        \]
+
+        <img src="img/7(2).png" style="width: 75%; border: 0;">
+        <br>
+        Dal grafico vediamo che lo spostamento orizzontale da \(A\) a \(B\) è di \(3\) unità verso destra.
+        <br>
+        <br>
+        In alcuni casi non possiamo sfruttare la rappresentazione grafica per 
+        calcolarlo. 
+        <br>
+        In queste situazioni possiamo usare la seguente formula
+        <br>
+        <br>
+        <div class="grayBorder" style="width: fit-content; margin: auto;">
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} \,\,=\,\, x_B - x_A
+            \]
+        </div>
+        <br>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    <h3 class="green">Esercizio guida 1</h3>
+    <br>
+    <div id="slide-container1" class="slide-container grayBorder">
+        <div class="slide1">
+            Dati i punti 
+            \[
+                A(2\,;\,\,1) \qquad B(5\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+        </div>
+        <div class="slide1">
+            Dati i punti 
+            \[
+                A(2\,;\,\,1) \qquad B(5\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = \color{transparent}{5 - 2} = 3
+            \]
+        </div>
+        <div class="slide1">
+            Dati i punti 
+            \[
+                A(2\,;\,\,1) \qquad B(\color{blue}{}5\color{black}{}\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = \color{transparent}{}5 - 2 = 3
+            \]
+        </div>
+        <div class="slide1">
+            Dati i punti 
+            \[
+                A(2\,;\,\,1) \qquad B(5\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = \color{blue}{}5\color{transparent}{} - 2 = 3
+            \]
+        </div>
+        <div class="slide1">
+            Dati i punti 
+            \[
+                A(2\,;\,\,1) \qquad B(5\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 5\color{red}{} -\color{transparent}{} 2 = 3
+            \]
+        </div>
+        <div class="slide1">
+            Dati i punti 
+            \[
+                A(\color{blue}{}2\color{black}{}\,;\,\,1) \qquad B(5\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 5 -\color{transparent}{} 2 = 3
+            \]
+        </div>
+        <div class="slide1">
+            Dati i punti 
+            \[
+                A(2\,;\,\,1) \qquad B(5\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 5 - \color{blue}{}2 \color{transparent}{}= 3
+            \]
+        </div>
+        <div class="slide1">
+            Dati i punti 
+            \[
+                A(2\,;\,\,1) \qquad B(5\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 5 - 2 = \color{blue}{}3
+            \]
+        </div>
+        <div class="slide1">
+            Dati i punti 
+            \[
+                A(2\,;\,\,1) \qquad B(5\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 5 - 2 = 3
+            \]
+            Vedere per credere:
+            <br>
+            <br>
+            <img src="img/7(3).png" alt="">
+        </div>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+        <button id="previousSlide-button1" onclick="previousSlide(1)">Indietro</button>
+        <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio guida 2</h3>
+    <br>
+    <div id="slide-container2" class="slide-container grayBorder">
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(-2\,;\,\,1) \qquad B(3\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+        </div>
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(-2\,;\,\,1) \qquad B(3\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = \color{transparent}{3 - (-2)} = 5
+            \]
+        </div>
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(-2\,;\,\,1) \qquad B(\color{blue}{}3\color{black}{}\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = \color{transparent}{}3 - (-2) = 5
+            \]
+        </div>
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(-2\,;\,\,1) \qquad B(3\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = \color{blue}{}3\color{transparent}{} - (-2) = 5
+            \]
+        </div>
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(-2\,;\,\,1) \qquad B(3\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 3\color{red}{} -\color{transparent}{} (-2) = 5
+            \]
+        </div>
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(\color{blue}{}-2\color{black}{}\,;\,\,1) \qquad B(3\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 3 -\color{transparent}{} (-2) = 5
+            \]
+        </div>
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(-2\,;\,\,1) \qquad B(3\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 3 - \color{blue}{}(-2) \color{transparent}{}= 5
+            \]
+        </div>
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(-2\,;\,\,1) \qquad B(3\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 3 \color{blue}{}-(-2) \color{transparent}{}= 5
+            \]
+        </div>
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(-2\,;\,\,1) \qquad B(3\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 3 + 2 \color{transparent}{}= 5
+            \]
+        </div>
+        <div class="slide2">
+            Dati i punti 
+            \[
+                A(-2\,;\,\,1) \qquad B(3\,;\,\,4)
+            \]
+            calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            <br>
+            <br>
+            <b><u>Svolgimento</u></b>
+            <br>
+            \[
+                \text{spost. orizz. da \(A\) a \(B\)} = 3 + 2 =5
+            \]
+        </div>
+    </div>
+    <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+        <button id="previousSlide-button2" onclick="previousSlide(2)">Indietro</button>
+        <button id="nextSlide-button2" onclick="nextSlide(2)">Avanti</button>
+    </div> 
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        Dati i punti
+        \[
+            A(-2\,;\,\,3) \qquad B(5\,;\,\,10)
+        \]
+        <br>
+        <br>
+        <ul>
+            <li>
+                calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            </li>
+            <br>
+            <li>
+                calcolare lo spostamento orizzontale da \(B\) a \(A\).
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Dati i punti
+        \[
+            A\left(\dfrac{1}{2}\,;\,\,-1\right) \qquad B\left(\dfrac{1}{3}\,;\,\,\dfrac{3}{5}\right)
+        \]
+        <br>
+        <br>
+        <ul>
+            <li>
+                calcolare lo spostamento orizzontale da \(A\) a \(B\).
+            </li>
+            <br>
+            <li>
+                calcolare lo spostamento orizzontale da \(B\) a \(A\).
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <div>
+        Dati i punti
+        \[
+            A\left(\dfrac{1}{2}\,;\,\,-1\right) \qquad B\left(\dfrac{1}{3}\,;\,\,\dfrac{3}{5}\right)
+        \]
+        <br>
+        <br>
+        <ul>
+            <li>
+                calcolare lo spostamento <b>verticale</b> da \(A\) a \(B\).
+            </li>
+            <br>
+            <li>
+                calcolare lo spostamento <b>verticale</b> da \(B\) a \(A\).
+            </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <b>Suggerimento:</b> 
+        <br>
+        Osservate attentamente la formula dello spostamento <b>orizzontale</b>. Andando per analogia 
+        riuscite ad immaginare quale sia la formula dello spostamento <b>verticale</b>?
+    </div>
+
+    
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
+
