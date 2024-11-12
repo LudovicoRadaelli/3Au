@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>        
+
+    <h3 class="yellow">Coefficiente angolare</h3>
+    <div class="esempi-container">
+        Consideriamo la retta passante per i punti
+        \[
+            A(x_{_A}\,,\,\,y_{_A}) \qquad B(x_{_B}\,,\,\,y_{_B})
+        \]
+        Il <b>coefficiente angolare</b> di tale retta si calcola attraverso la formula
+        
+        
+        <div id="slide-container1" class="slide-container">        
+            <div class="slide1">
+                \[
+                    m = \dfrac{y_{_B} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]
+                <div class="gray">
+                    <span style="color: transparent;">Lo spostamento <b>orizzontale</b> da \(A\) a \(B\) è dato da \(x_{_B} - x_{_A}\)</span>
+                </div>
+                <br>
+                <img src="img/8(1).png" style="width: 85%;">
+            </div>
+            <div class="slide1">
+                \[
+                    m = \dfrac{y_{_B} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]
+                <div class="gray">
+                    <span style="color: transparent;">Lo spostamento <b>orizzontale</b> da \(A\) a \(B\) è dato da \(x_{_B} - x_{_A}\)</span>
+                </div>
+                <br>
+                <img src="img/8(2).png" style="width: 85%;">
+            </div>
+            <div class="slide1">
+                \[
+                    m = \dfrac{y_{_B} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]
+                <div class="gray">
+                    Lo spostamento <b>orizzontale</b> da \(A\) a \(B\) è dato da \(x_{_B} - x_{_A}\)
+                </div>
+                <br>
+                <img src="img/8(2).png" style="width: 85%;">
+            </div>        
+            <div class="slide1">
+                \[
+                    m = \dfrac{y_{_B} - y_{_A}}{\color{red}{}x_{_B} - x_{_A}}    
+                \]
+                <div class="gray">
+                    Lo spostamento <b>orizzontale</b> da \(A\) a \(B\) è dato da \(x_{_B} - x_{_A}\)
+                </div>
+                <br>
+                <img src="img/8(3).png" style="width: 85%;">
+            </div>
+            <div class="slide1">
+                \[
+                    m = \dfrac{y_{_B} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]
+                <div class="gray">
+                    <span style="color: transparent;">Lo spostamento <b>verticale</b> da \(A\) a \(B\) è dato da \(y_{_B} - y_{_A}\)</span>
+                </div>
+                <br>
+                <img src="img/8(2).png" style="width: 85%;">
+            </div>
+            <div class="slide1">
+                \[
+                    m = \dfrac{y_{_B} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]
+                <div class="gray">
+                    Lo spostamento <b>verticale</b> da \(A\) a \(B\) è dato da \(y_{_B} - y_{_A}\)
+                </div>
+                <br>
+                <img src="img/8(2).png" style="width: 85%;">
+            </div>
+            <div class="slide1">
+                \[
+                    m = \dfrac{\color{blue}{}y_{_B} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]
+                <div class="gray">
+                    Lo spostamento <b>verticale</b> da \(A\) a \(B\) è dato da \(y_{_B} - y_{_A}\)
+                </div>
+                <br>
+                <img src="img/8(4).png" style="width: 85%;">
+            </div>
+            <div class="slide1">
+                \[
+                    m = \dfrac{y_{_B} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]
+                <div class="gray">
+                    <span style="color: transparent;">Lo spostamento <b>verticale</b> da \(A\) a \(B\) è dato da \(y_{_B} - y_{_A}\)</span>
+                </div>
+                <br>
+                <img src="img/8(1).png" style="width: 85%;">
+            </div>
+            
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button1" onclick="previousSlide(1)">Indietro</button>
+            <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    
+    <h3 class="green">Esercizio guida</h3>
+    <div>
+        <div id="slide-container2" class="slide-container grayBorder">        
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{y_{_B} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{\color{blue}{}y_{_B}\color{black}{} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,\color{blue}{}-3\color{black}{})
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{y_{_B} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{\color{blue}{}-3\color{black}{} - y_{_A}}{x_{_B} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - \color{blue}{}y_{_A}\color{black}{}}{x_{_B} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,\color{blue}{}2\color{black}{}) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - y_{_A}}{x_{_B} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - \color{blue}{}2\color{black}{}}{x_{_B} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{\color{blue}{}x_{_B}\color{black}{} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(\color{blue}{}7\color{black}{}\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{x_{_B} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{\color{blue}{}7\color{black}{} - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{7 - \color{blue}{}x_{_A}\color{black}{}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(\color{blue}{}-1\color{black}{}\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{7 - x_{_A}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{7 - \color{blue}{}(-1)\color{black}{}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{7 \color{blue}{}- (-1)\color{black}{}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{7 \color{blue}{}+ 1\color{black}{}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{\color{blue}{}7 + 1\color{black}{}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{-3 - 2}{\color{blue}{}8\color{black}{}}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{\color{blue}{}-3 - 2\color{black}{}}{8}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = \dfrac{\color{blue}{}-5\color{black}{}}{8}    
+                \]            
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = -\dfrac{5}{8}    
+                \]                        
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = -\dfrac{5}{8}    
+                \]
+                La retta ha coeffienta angolare uguale a \(-\dfrac{5}{8}\). 
+            </div>
+            <div class="slide2">
+                Calcolare il coefficiente angolare della retta passante per i punti
+                \[
+                    A(-1\,;\,\,2) \qquad B(7\,;\,\,-3)
+                \]
+                Applichiamo la formula
+                \[
+                    m = -\dfrac{5}{8}    
+                \]
+                La retta ha coeffienta angolare uguale a \(-\dfrac{5}{8}\).             
+            </div>
+    
+            
+            
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button2" onclick="previousSlide(2)">Indietro</button>
+            <button id="nextSlide-button2" onclick="nextSlide(2)">Avanti</button>
+        </div> 
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    <div>
+        Calcolare il coefficiente angolare della retta passante per i punti
+        \[
+            A(10\,;\,\,-12) \qquad B(1\,;\,\,-2)
+        \]   
+    </div>
+
+    <div class="gray">
+        <b>Soluzione</b>
+        <br>
+        Il coefficiente angolare della retta è \(-\dfrac{10}{9}\)
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 2</h3>
+    <br>
+    <div>
+        Calcolare il coefficiente angolare della retta passante per i punti
+        \[
+            A\left(\dfrac{1}{2}\,;\,\,1\right) \qquad B\left(\dfrac{2}{3}\,;\,\,\dfrac{1}{4}\right)
+        \]   
+    </div>
+
+    <div class="gray">
+        <b>Suggerimento</b>
+        <br>
+        Per svolgere una frazione di frazione ricordiamo la seguente regola
+        \[
+            \dfrac{\frac{A}{B}}{\frac{\color{red}{}C}{\color{blue}{}D}} = \dfrac{A}{B} \cdot \dfrac{\color{blue}{}D}{\color{red}{}C}
+        \]
+    </div>
+
+    <div class="gray">
+        <b>Soluzione</b>
+        <br>
+        Il coefficiente angolare della retta è \(-\dfrac{9}{2}\)
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 3</h3>
+    <br>
+    <div>
+        Determinare l'equazione associata alla seguente retta
+        <br>
+        <br>
+        <img src="img/8(5).png" style="width: 70%; border: 0;">
+    </div>
+
+    <br>
+
+    <div class="gray">
+        <b>Soluzione</b>
+        <br>
+        L'equazione associata alla retta è \(y = \dfrac{3}{2}x + 3\)
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+    <h3 class="blue">Esercizi di recupero</h3>
+    <span style="color: gray; font-size: 0.9rem;">(Per chi deve sostenere la verifica di recupero dell'insufficienza)</span>
+    <br>
+    <br>
+    <div>
+        Svolgere l'esercizio 1 e 2 della scheda di esercizio disponibile <a href="../1sistemiLineariEDisequazioni/10.html">QUI</a>
+    </div>
+
+    
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
+
