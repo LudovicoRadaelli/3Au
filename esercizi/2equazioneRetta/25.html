@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Compiti per casa</title>
+</head>
+<body>
+    <h1>Compiti per casa</h1>
+    
+    <br>     
+
+    <h3 class="yellow">Media aritmetica, mediana e moda</h3>    
+    <div class="esempi-container">        
+        <b class="yellow">Media aritmetica</b>
+        <br>
+        <br>
+        Un corridore segna giorno per giorno i kilometri percorsi durante l'allenamento.
+        <br>
+        <br>
+        <table style="width: auto;">
+            <tr>
+                <th>giorno</th>
+                <th>distanza percorsa</th>
+            </tr>
+            <tr>
+                <td>\(1\)</td>
+                <td>\(\color{#E83D8C}{}2\,\,\,km\)</td>
+            </tr>
+            <tr>
+                <td>\(2\)</td>
+                <td>\(\color{#5C77FD}{}3\,\,\,km\)</td>
+            </tr>
+            <tr>
+                <td>\(3\)</td>
+                <td>\(\color{#F4B400}{}1\,\,\,km\)</td>
+            </tr>
+            <tr>
+                <td>\(4\)</td>
+                <td>\(\color{#A47AD8}{}3\,\,\,km\)</td>
+            </tr>
+            <tr>
+                <td>\(5\)</td>
+                <td>\(\color{#3CB62A}{}1\,\,\,km\)</td>
+            </tr>            
+        </table>                        
+
+        <img src="img/statistica(2).png" style="border: 0;">
+        <br>
+        <br>
+        Nel corso dei cinque allenamenti in totale ha percorso 
+        <div class="formula">
+            \[
+                \color{#E83D8C}{}2\,\,\,km \color{black}{}+ 
+                \color{#5C77FD}{}3\,\,\,km \color{black}{}+ 
+                \color{#F4B400}{}1\,\,\,km \color{black}{}+ 
+                \color{#A47AD8}{}3\,\,\,km \color{black}{}+ 
+                \color{#3CB62A}{}1\,\,\,km 
+                \color{black}{}= 10 \,\,\,km
+            \]
+        </div>
+        <img src="img/statistica(1).png" style="border: 0;">
+        
+         
+        L'atleta decide di correre ogni giorno la stessa quantità di kilometri. Quanti ne deve 
+        correre al giorno per coprire sempre \(10\) km in cinque giorni?
+
+        <br>
+        <br>
+
+        <div id="slide-container1" class="slide-container grayBorder">
+            <div class="slide1">
+                <img src="img/statistica(3).png" style="border: 0;">
+            </div>
+            <div class="slide1">
+                <img src="img/statistica(5).png" style="border: 0;">
+            </div>
+            <div class="slide1">
+                <img src="img/statistica(4).png" style="border: 0;">
+            </div>
+            <div class="slide1">
+                <img src="img/statistica(6).png" style="border: 0;">
+            </div>
+        </div>
+        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-items: center;">
+            <button id="previousSlide-button1" onclick="previousSlide(1)">Indietro</button>
+            <button id="nextSlide-button1" onclick="nextSlide(1)">Avanti</button>
+        </div> 
+        <br>
+        <br>
+    
+        Diremo che l'atleta ha corso <b>in media</b> \(2\) km al giorno. 
+        <br>
+        Per ottenere la media abbiamo sommato ciascuna delle distanze percorse ed abbiamo diviso il
+        risultato per il numero di allenamenti.
+        <br>
+        <br>
+        Generalizziamo la formula.
+        <br>
+        <br>    
+        <div class="grayBackground">
+            Consideriamo i dati \(d_1\,\,d_2,\,d_3,\,\dots\,, d_n\). La media aritmentica \(m\) è 
+            \[
+                m =    \dfrac{d_1 + d_2 + \cdots+ d_n}{n}
+            \]
+        </div>
+
+        <br>
+        <br>
+        <hr>
+        <br>        
+        <br>
+
+        <b class="yellow">Mediana</b>
+        <br>
+        <br>
+        Anche la mediana è un valore riassuntivo di un insieme di dati.
+        <br>
+        <br>
+        <b>Esempio 1</b>
+        <br>
+        <div class="grayBorder">
+            Riprendendo l'esempio dell'atleta: 
+            <br>
+            <br>
+            <table style="width: auto;">
+                <tr>
+                    <th>giorno</th>
+                    <th>distanza percorsa</th>
+                </tr>
+                <tr>
+                    <td>\(1\)</td>
+                    <td>\(\color{#E83D8C}{}2\,\,\,km\)</td>
+                </tr>
+                <tr>
+                    <td>\(2\)</td>
+                    <td>\(\color{#5C77FD}{}3\,\,\,km\)</td>
+                </tr>
+                <tr>
+                    <td>\(3\)</td>
+                    <td>\(\color{#F4B400}{}1\,\,\,km\)</td>
+                </tr>
+                <tr>
+                    <td>\(4\)</td>
+                    <td>\(\color{#A47AD8}{}3\,\,\,km\)</td>
+                </tr>
+                <tr>
+                    <td>\(5\)</td>
+                    <td>\(\color{#3CB62A}{}1\,\,\,km\)</td>
+                </tr>            
+            </table> 
+            <br>
+            Disponiamo i dati in ordine <b>crescente</b> e mettiamo in evidenza il <b>dato centrale</b>.
+            <div class="formula">
+                \[
+                    \color{#F4B400}{}1 \quad 
+                    \color{#3CB62A}{}1 \quad 
+                    \color{black}{} \boxed{\color{#E83D8C}{}2} \quad 
+                    \color{#5C77FD}{}3 \quad 
+                    \color{#A47AD8}{}3
+                \]
+            </div>
+            Diremo che la <b>mediana</b> dei dati è \(2\).
+        </div>
+        <br>
+        <br>
+        <b>Esempio 2</b>
+        <br>
+        <div class="grayBorder">
+            Nel caso si abbiano un numero pari di dati la mediana è la media aritmetica dei due valori centrali.
+            <br>
+            Aggiungiamo un allenamento a quelli dell'esempio precedente
+            
+            <br>
+            <br>
+    
+            <table style="width: auto;">
+                <tr>
+                    <th>giorno</th>
+                    <th>distanza percorsa</th>
+                </tr>
+                <tr>
+                    <td>\(1\)</td>
+                    <td>\(\color{#E83D8C}{}2\,\,\,km\)</td>
+                </tr>
+                <tr>
+                    <td>\(2\)</td>
+                    <td>\(\color{#5C77FD}{}3\,\,\,km\)</td>
+                </tr>
+                <tr>
+                    <td>\(3\)</td>
+                    <td>\(\color{#F4B400}{}1\,\,\,km\)</td>
+                </tr>
+                <tr>
+                    <td>\(4\)</td>
+                    <td>\(\color{#A47AD8}{}3\,\,\,km\)</td>
+                </tr>
+                <tr>
+                    <td>\(5\)</td>
+                    <td>\(\color{#3CB62A}{}1\,\,\,km\)</td>
+                </tr>      
+                <tr>
+                    <td>\(6\)</td>
+                    <td>\(\color{#DA8258}{}1\,\,\,km\)</td>
+                </tr>            
+            </table> 
+            <br>
+            Disponiamo i valori in ordine crescente e consideriamo i due valori centrali
+            \[
+                \color{#F4B400}{}1 \quad 
+                \color{#3CB62A}{}1 \quad 
+                \color{black}{} \boxed{\color{#DA8258}{}1} \quad
+                \color{black}{} \boxed{\color{#E83D8C}{}2} \quad 
+                \color{#5C77FD}{}3 \quad 
+                \color{#A47AD8}{}3
+            \]
+            Calcolando la media dei valori centrali otteniamo la <b>mediana</b>
+            \[
+                mediana = \dfrac{\color{#DA8258}{}1 \color{black}{} + \color{#E83D8C}{}2}{2} = 1.5
+            \]            
+        </div>
+        <br>
+        <br>
+        Rissumendo        
+        <br>
+        <div class="grayBackground">
+            Consideriamo un insieme di dati e disponiamoli in ordine crescente.
+            <br>
+            <br>
+            <ul>
+                <li>
+                    Se il numero di dati è dispari la mediana è il valore centrale che osserviamo
+                    della lista ordinata dei dati.
+                </li>
+                <li>
+                    Se il numero di dati è pari la mediana è la media dei due valori centrali della
+                    lista ordinata dei dati.
+                </li>
+            </ul>
+
+        </div>
+        <br>
+        <br>
+        Nel prossimo esempio vediamo un caso nel quale la mediana descrive un insieme di dati "meglio"
+        della media aritmetica.
+        <b>Esempio 3</b>
+        <br>
+        <div class="grayBorder">
+            Consideriamo la pagella riportata dallo studente H.P. ⚡🪄
+        
+            <br>
+            <br>
+    
+            <table style="width: auto;">
+                <tr>    
+                    <th>Materia</th>        
+                    <th>Voto</th>
+                </tr>
+                <tr>
+                    <td>Trasfigurazione</td>
+                    <td>\(8\)</td>                
+                </tr>
+                <tr>
+                    <td>Incantesimi</td>
+                    <td>\(7\)</td>                
+                </tr>
+                <tr>
+                    <td>Pozioni</td>
+                    <td>\(2\)</td>                
+                </tr>
+                <tr>
+                    <td>Storia della Magia</td>
+                    <td>\(6\)</td>                
+                </tr>
+                <tr>
+                    <td>Difesa contro le Arti Oscure</td>
+                    <td>\(10\)</td>                
+                </tr>            
+                <tr>
+                    <td>Astronomia</td>
+                    <td>\(6\)</td>                
+                </tr>            
+                <tr>
+                    <td>Erbologia</td>
+                    <td>\(8\)</td>                
+                </tr>            
+                <tr>
+                    <td>Volo</td>
+                    <td>\(10\)</td>                
+                </tr>            
+            </table>
+            
+            <br>
+                    
+            Calcoliamo la media aritmetica dei voti
+            <div class="formula">
+                \[
+                    m = \dfrac{8 + 7 + 2 + 6 + 10 + 6 + 8 + 10}{8} = 7.125
+                \]
+            </div>
+            Notiamo che il \(2\) in Pozioni stona rispetto alla pagella. Proviamo a calcolare 
+            la <b>mediana</b> della pagella. Disponiamo in ordine crescente i voti e mettiamo 
+            in evidenza i due valori centrali
+            \[
+              8 \quad 7 \quad 2 \quad \boxed{6} \quad \boxed{10} \quad 6 \quad 8 \quad 10  
+            \]
+            \[
+              2 \quad 6 \quad 6 \quad \boxed{7} \quad \boxed{8} \quad 8 \quad 10 \quad 10  
+            \]
+            La mediana è la media dei valori centrali, ovvero \(\frac{7 + 8}{2} = 7.5\).            
+            Questo numero meglio rappresente la situazione dello studente nel caso in cui si voglia 
+            considerare il voto in Pozioni come uno "scivolone" e non tenerne conto nella valutazione 
+            complessiva.
+
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+            <b class="yellow">Moda</b>
+            <br>
+            La <b>moda</b> di un insieme di dati è il dato che si predenta con maggiore frequenza.
+            <br>
+            <br>
+            <b>Esempio</b> 
+            <br>
+            <div class="grayBorder">
+                In un negozio di abbigliamento lo stesso modello di felpa è disponibile in diversi colori:  
+                rosso, verde, blue, giallo e nero. nella tabella di seguito per ogni colore viene riportato 
+                il numero di maglioni venduti durante la settimana
+                <br>
+                <br>
+                <table style="width: fit-content;">
+                    <tr>
+                       <td>Colore</td> 
+                       <td>Articoli venduti</td>
+                    </tr>
+                    <tr>
+                        <td>Rosso</td> 
+                        <td>\(16\)</td>
+                    </tr>
+                    <tr>
+                        <td>Verde</td> 
+                        <td>\(13\)</td>
+                    </tr>
+                    <tr>
+                        <td>Blu</td> 
+                        <td>\(18\)</td>
+                    </tr>
+                    <tr>
+                        <td>Giallo</td> 
+                        <td>\(5\)</td>
+                    </tr>
+                    <tr>
+                        <td>Nero</td> 
+                        <td>\(30\)</td>
+                    </tr>
+                </table>
+                <br>
+                La <b>moda</b> di questo insieme di dati è \(30\).
+            </div>
+        </div>        
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3 class="green">Esercizio 1</h3>
+    <br>
+    Consideriamo il seguente insieme di dati relativi alla vendita di automobili in una 
+    concessionaria nell'arco di un anno
+    <br>
+    <br>
+    <table style="width: fit-content;">
+        <tr>
+            <th>Modello</th>
+            <th>Auto vendute</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>36</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>13</td>
+        </tr>
+    </table>
+
+    Calcolare la <b>media aritmetica</b>, la <b>mediana</b> e la <b>moda</b>.
+
+    
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+</body>
