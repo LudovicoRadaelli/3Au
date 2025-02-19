@@ -62,6 +62,37 @@
                     "nomeCartella": "rettaPassantePerDuePunti"
                 }
             ]
+        },
+        {
+            "numero": 3,
+            "titolo": "Le disequazioni",
+            "nomeCartella": "3disequazioni",
+            "paragrafo": [
+                {
+                    "titolo": "Disequazioni lineari",
+                    "nomeCartella": "disequazioniLineari"
+                },
+                {
+                    "titolo": "Equazioni di secondo grado",
+                    "nomeCartella": "equazioniSecondoGrado"
+                },
+                {
+                    "titolo": "Polinomi di secondo grado e parabola",
+                    "nomeCartella": "polinomiSecondoGradoEParabola"
+                },
+                {
+                    "titolo": "Segno di un polinomio di secondo grado",
+                    "nomeCartella": "segnoPolinomioSecondoGrado"
+                },
+                {
+                    "titolo": "Disequazioni risovibili attraverso il grafico dei segni",
+                    "nomeCartella": "disequazioniRegolaSegni"
+                },
+                {
+                    "titolo": "Sistemi di disequazioni",
+                    "nomeCartella": "sistemiDisequazioni"
+                }   
+            ]
         }
 
     ],
